@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f3ec" />
+    <meta name="description" content="Analise evidências técnicas em repositórios públicos do GitHub, gratuitamente." />
+    <title>Rastro | Leitura técnica de perfil GitHub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Rastro, início">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>rastro<span class="brand-period">.</span></span>
+      </a>
+      <span class="topbar-note"><span class="live-dot"></span> LEITURA DE DADOS PÚBLICOS</span>
+    </header>
+
+    <main id="inicio">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">FERRAMENTA DE PESQUISA TÉCNICA <span>01 / PERFIL</span></p>
+        <h1 id="page-title">O código conta<br /><em>uma parte da história.</em></h1>
+        <p class="intro-copy">Explore sinais observáveis em projetos públicos e compare-os com uma oportunidade. Sem caixa-preta, sem cobrança.</p>
+      </section>
+
+      <div class="workspace">
+        <aside class="search-panel" aria-label="Dados para análise">
+          <div class="panel-heading">
+            <span class="step-number">01</span>
+            <div><h2>Perfil público</h2><p>Comece com um perfil do GitHub.</p></div>
+          </div>
+          <form id="analysis-form">
+            <label for="github-profile">URL ou usuário</label>
+            <div class="input-wrap"><span class="input-prefix">github.com/</span><input id="github-profile" name="profile" type="text" placeholder="octocat" autocomplete="url" required /></div>
+            <p class="field-hint">Ex.: github.com/octocat ou octocat</p>
+
+            <label for="job-description" class="job-label">Oportunidade <span>OPCIONAL</span></label>
+            <textarea id="job-description" name="job" rows="6" placeholder="Cole o título ou os requisitos da vaga para comparar com as evidências encontradas."></textarea>
+            <p class="field-hint">A comparação é textual: termos não encontrados não significam falta de experiência.</p>
+
+            <button class="submit-button" type="submit"><span>Analisar perfil</span><span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="privacy-note"><span aria-hidden="true">◌</span><p>A análise acontece neste navegador. Consultamos apenas a API pública do GitHub; nenhum dado é salvo por esta página.</p></div>
+        </aside>
+
+        <section id="results" class="results" aria-live="polite" aria-busy="false" aria-label="Resultado da análise">
+          <div class="empty-state">
+            <div class="empty-art" aria-hidden="true"><span></span><span></span><span></span><span></span><b>GH</b></div>
+            <p class="eyebrow">UM RETRATO, NÃO UM VEREDITO</p>
+            <h2>Pronto para olhar<br />mais de perto.</h2>
+            <p>Informe um perfil para reunir projetos, tecnologias mencionadas e atividade recente em um só lugar.</p>
+            <div class="empty-rule"><span>REPOSITÓRIOS PÚBLICOS</span><span>·</span><span>SEM LOGIN</span><span>·</span><span>GRATUITO</span></div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="site-footer">
+        <p>Rastro não classifica pessoas. Ajuda a encontrar evidências para uma conversa melhor.</p>
+        <a href="https://docs.github.com/en/rest" target="_blank" rel="noreferrer">API REST do GitHub ↗</a>
+      </footer>
+    </main>
+  </body>
+</html>
