@@ -25,3 +25,29 @@ Depois, abra `http://localhost:8000`.
 - Não salva os dados; é possível imprimir ou salvar o resultado como PDF pelo navegador.
 
 As consultas de perfil sem autenticação estão sujeitas ao limite de requisições do GitHub por endereço IP. A análise textual de projetos com README identifica sinais, não comprova autoria, profundidade ou experiência; termos ausentes não significam falta de habilidade. Use o resultado como ponto de partida para uma conversa, nunca como critério automático de contratação. Considere também que repositórios públicos podem conter dados pessoais publicados pelo próprio usuário.
+
+## Fotos sistema em operação
+<hr>
+<div align="center">
+   <img src="img/1.jpg" alt="Seleção entre os perfis de eleitor e administrador" width="720" />
+</div><hr>
+<div align="center">
+   <img src="img/2.jpg" alt="Seleção entre os perfis de eleitor e administrador" width="720" />
+</div><hr>
+<div align="center">
+   <img src="img/3.jpg" alt="Seleção entre os perfis de eleitor e administrador" width="720" />
+</div><hr>
+<div align="center">
+   <img src="img/4.jpg" alt="Seleção entre os perfis de eleitor e administrador" width="720" />
+</div><hr>
+<div align="center">
+   <img src="img/5.jpg" alt="Seleção entre os perfis de eleitor e administrador" width="720" />
+</div><hr>
+<div align="center">
+   <img src="img/6.jpg" alt="Seleção entre os perfis de eleitor e administrador" width="720" />
+</div><hr>
+<div align="center">
+   <img src="img/7.jpg" alt="Seleção entre os perfis de eleitor e administrador" width="720" />
+</div><hr>
+
+**Autoria** Sander Gustavo Piva
