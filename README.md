@@ -2,6 +2,10 @@
 
 Protótipo gratuito para reunir evidências técnicas em repositórios públicos do GitHub e compará-las, por palavras-chave, com uma oportunidade.
 
+## Objetivo
+
+Explorar o potencial do GitHub Copilot na concepção e implementação do agente Rastro, bem como realizar testes de performance, otimizações e melhorias contínuas sob demanda.
+
 ## Executar
 
 Não há dependências nem build. Sirva a pasta com qualquer servidor HTTP local, por exemplo:
@@ -50,4 +54,4 @@ As consultas de perfil sem autenticação estão sujeitas ao limite de requisiç
    <img src="img/7.jpg" alt="Seleção entre os perfis de eleitor e administrador" width="720" />
 </div><hr>
 
-**Autoria** Sander Gustavo Piva
+**Autoria**: Sander Gustavo Piva
