@@ -20,10 +20,32 @@ const skillPatterns = [
   ["Pandas", /\bpandas\b/i], ["TensorFlow", /\btensorflow\b/i], ["PyTorch", /\bpytorch\b/i], ["Figma", /\bfigma\b/i],
 ];
 
-const stopWords = new Set(("a o os as um uma uns umas de da do das dos em no na nos nas por para com sem sobre entre e ou que se ao aos à às " +
-  "the a an and or for to of in on with from by as is are be this that it at into using used role engineer developer senior junior " +
-  "experiência experiencia conhecimento habilidade habilidades desejável diferencial requisitos responsabilidade responsável " +
-  "desenvolvedor desenvolvedora vaga trabalho profissional pessoa time equipe anos ano superior completo formação graduação").split(/\s+/));
+const keyWords = new Set([
+  "python", "ia", "ml", "machine", "learning",
+  "estatistica", "science", "ETL", "ELT", "pandas", "numpy",
+  "scikit-learn", "matplot", "seaborn", 
+  "tensorflow", "pytorch", "llm", "deep", "learning",
+  "r", "rstudio", "caret", "dplyr", "shiny",
+  "automação", "automacao", "agente", "n8n", 
+  "engenharia", "prompts", 
+  "java", "c" , "c#", "c++", "go", "rust", "php", 
+  "ruby", "kotlin", "swift", 
+  "dart", "flutter", "android", "studio", 
+  "typescript", "javascript", "js", 
+  "html", "css", "react", "next.js",
+  "vue", "angular", "svelte", "node.js", 
+  "express", "nestjs", "django", "flask", 
+  "fastapi", "spring", ".net", "laravel", "sql", 
+  "postgresql", "mysql", "mongodb", "redis",
+  "docker", "kubernetes", "aws", "azure", "gcp", "google", "cloud", 
+  "terraform", "graphql", "figma", "miro",
+  "lucidchart", "visualização", "dashboard", "vercel",  
+  "excel", "power", "bi", "streamlit", "looker", "modelagem",
+  "databricks", "pyspark", "spark", "hadoop",
+  "airflow", "pipelines",
+  
+]);
+
 
 function escapeHtml(value = "") {
   return String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
@@ -184,9 +206,13 @@ function skillEvidence(repos, readmes) {
 
 function roleTerms(description) {
   const words = description.toLocaleLowerCase("pt-BR").match(/[\p{L}\p{N}+#.]{2,}/gu) || [];
-  return [...new Set(words.map((word) => word === ".net" ? word : word.replace(/^[.]+|[.]+$/g, "")).filter((word) =>
-    word.length > 2 && !stopWords.has(word) || ["go", "c#", "c++", ".net"].includes(word)))].slice(0, 32);
+  return [...new Set(
+    words
+      .map((word) => word === ".net" ? word : word.replace(/^[.]+|[.]+$/g, ""))
+      .filter((word) => keyWords.has(word))
+  )].slice(0, 32);
 }
+
 
 function evidenceHasTerm(evidence, term) {
   const normalized = evidence.toLocaleLowerCase("pt-BR");
