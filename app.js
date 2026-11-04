@@ -17,34 +17,28 @@ const skillPatterns = [
   ["Redis", /\bredis\b/i], ["Docker", /\bdocker\b/i], ["Kubernetes", /\bkubernetes\b|\bk8s\b/i], ["AWS", /\baws\b|amazon web services/i],
   ["Azure", /\bazure\b/i], ["Google Cloud", /\bgoogle cloud\b|\bgcp\b/i], ["GitHub Actions", /\bgithub actions\b/i],
   ["Terraform", /\bterraform\b/i], ["GraphQL", /\bgraphql\b/i], ["REST", /\brest(?:ful)? api\b/i], ["Tailwind CSS", /\btailwind(?: css)?\b/i],
-  ["Pandas", /\bpandas\b/i], ["TensorFlow", /\btensorflow\b/i], ["PyTorch", /\bpytorch\b/i], ["Figma", /\bfigma\b/i],
+  ["Pandas", /\bpandas\b/i], ["TensorFlow", /\btensorflow\b/i], ["PyTorch", /\bpytorch\b/i],
+  ["Pipeline", /\bpipeline\b/i], ["Numpy", /\bnumpy\b/i], ["Scikit", /\bscikit\b/i],
+  ["Matplot", /\bmatplot\b/i],["Seaborn", /\bseaborn\b/i], ["Power", /\bpower\b/i], ["BI", /\bbi\b/i], 
+  ["RSTUDIO", /\brstudio\b/i],["Dplyr", /\bdplyr\b/i],["Caret", /\bcaret\b/i],["Shiny", /\bshiny\b/i],
+  ["Figma", /\bfigma\b/i],["Miro", /\bmiro\b/i],["LucidChart", /\blucidchart\b/i],["Streamlit", /\bstreamlit\b/i],
+  ["Excel", /\bexcel\b/i], ["Looker", /\blooker\b/i], ["Prompt", /\bprompt\b/i],
+  ["N8N", /\bn8n\b/i],["Automação", /\bautomação\b/i], ["Dart", /\bdart\b/i],
+  ["Android", /\bandroid\b/i], ["Flutter", /\bflutter\b/i],
+  ["Automacao", /\bautomacao\b/i],["IA", /\bia\b/i], 
 ];
 
-const keyWords = new Set([
-  "python", "ia", "ml", "machine", "learning",
-  "estatistica", "science", "ETL", "ELT", "pandas", "numpy",
-  "scikit-learn", "matplot", "seaborn", 
-  "tensorflow", "pytorch", "llm", "deep", "learning",
-  "r", "rstudio", "caret", "dplyr", "shiny",
-  "automação", "automacao", "agente", "n8n", 
-  "engenharia", "prompts", 
-  "java", "c" , "c#", "c++", "go", "rust", "php", 
-  "ruby", "kotlin", "swift", 
-  "dart", "flutter", "android", "studio", 
-  "typescript", "javascript", "js", 
-  "html", "css", "react", "next.js",
-  "vue", "angular", "svelte", "node.js", 
-  "express", "nestjs", "django", "flask", 
-  "fastapi", "spring", ".net", "laravel", "sql", 
-  "postgresql", "mysql", "mongodb", "redis",
-  "docker", "kubernetes", "aws", "azure", "gcp", "google", "cloud", 
-  "terraform", "graphql", "figma", "miro",
-  "lucidchart", "visualização", "dashboard", "vercel",  
-  "excel", "power", "bi", "streamlit", "looker", "modelagem",
-  "databricks", "pyspark", "spark", "hadoop",
-  "airflow", "pipelines",
-  
-]);
+const keyWords = new Set(skillPatterns.map(([skill]) => skill.toLowerCase()));
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  if (!profileInput.value.trim() || !jobInput.value.trim()) {
+    alert("Por favor, preencha o perfil do GitHub e a descrição da vaga.");
+    return;
+  }
+
+});
 
 
 function escapeHtml(value = "") {
