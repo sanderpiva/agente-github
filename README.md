@@ -1,10 +1,10 @@
-# Rastro
+# Agente GitHub - Rastro
 
-Protótipo gratuito para reunir evidências técnicas em repositórios públicos do GitHub e compará-las, por palavras-chave, com uma oportunidade.
+Protótipo web que consome a API do GitHub para extrair evidências técnicas de repositórios públicos e utiliza um agente de IA para compará-las com os requisitos de uma oportunidade.
 
 ## Objetivo
 
-Explorar o potencial do GitHub Copilot na concepção e implementação do agente Rastro, bem como realizar testes de performance, otimizações e melhorias contínuas sob demanda.
+Explorar o potencial do GitHub Copilot na concepção e implementação do agente de IA Rastro, bem como realizar testes de performance, otimizações e melhorias contínuas sob demanda.
 
 ## Executar
 
