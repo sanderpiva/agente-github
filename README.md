@@ -1,10 +1,10 @@
 # Agente GitHub - Rastro
 
-Protótipo web que consome a API do GitHub para extrair evidências técnicas de repositórios públicos e utiliza um agente de IA para compará-las com os requisitos de uma oportunidade.
+Agente de IA com interface web que consome a API do GitHub para extrair evidências técnicas de repositórios públicos e compará-las com os requisitos de uma oportunidade.
 
 ## Objetivo
 
-Explorar o potencial do GitHub Copilot na concepção e implementação do agente de IA Rastro, bem como realizar testes de performance, otimizações e melhorias contínuas sob demanda.
+Explorar o potencial do GitHub Copilot na concepção e implementação do Rastro, um agente de IA que tem como interface uma aplicação web, bem como realizar testes de performance, otimizações e melhorias contínuas sob demanda.
 
 ## Executar
 
@@ -18,6 +18,8 @@ Depois, abra `http://localhost:8000`.
 
 ## Como funciona
 
+- Inicialmente é preciso colocar o Github do usuário e preencher a descrição com as habilidades buscadas/desejadas.
+- A descrição da oportunidade passa por um filtro para selecionar apenas as habilidades, removendo ruídos.
 - Consulta a API REST pública do GitHub diretamente no navegador, sem token, backend ou serviço pago.
 - Analisa até 300 repositórios públicos mais recentemente atualizados e procura os READMEs de cada projeto sem autenticação.
 - Analisa até 300 repositórios próprios mais recentemente atualizados; forks são excluídos dos dados, READMEs e resultados.
@@ -30,7 +32,7 @@ Depois, abra `http://localhost:8000`.
 
 As consultas de perfil sem autenticação estão sujeitas ao limite de requisições do GitHub por endereço IP. A análise textual de projetos com README identifica sinais, não comprova autoria, profundidade ou experiência; termos ausentes não significam falta de habilidade. Use o resultado como ponto de partida para uma conversa, nunca como critério automático de contratação. Considere também que repositórios públicos podem conter dados pessoais publicados pelo próprio usuário.
 
-## Fotos sistema em operação
+## Fotos do sistema em operação
 <hr>
 <div align="center">
    <img src="img/1.jpg" alt="Seleção entre os perfis de eleitor e administrador" width="720" />
